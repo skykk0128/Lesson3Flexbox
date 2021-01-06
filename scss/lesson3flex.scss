@@ -1,0 +1,804 @@
+$XS: 414px;
+$S: 768px;
+$MD: 1024px;
+$L: 1366px;
+$left: 10px;
+$height_sm: 75px;
+$height_md: 200px;
+$height_md_l: 300px;
+$width_md: 250px;
+$fontfamily: 'Open Sans', sans-serif;
+$letterspacing: 1px;
+
+
+@mixin MQ($canvas) {
+  @if $canvas==XS {
+    @media screen and (min-width: $XS) and (max-width: $S - 16) {
+      @content;
+    }
+  }
+  @else if $canvas==S {
+    @media screen and (min-width: $S) and (max-width: $MD - 16) {
+      @content;
+    }
+  }
+  @else if $canvas==MD {
+    @media screen and (min-width: $MD) and (max-width: $L - 16) {
+      @content;
+    }
+  }
+  @else if $canvas==L {
+    @media screen and (min-width: $L) {
+      @content;
+    }
+  }
+}
+
+.card {
+  padding-left: 20px;
+  width: 100%;
+  border-radius: 5px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  &__commonstyle {
+    margin: 10px;
+    position: relative;
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.1), 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+  }
+  &__sm--horizontal {
+    height: $height_sm;
+    width: 110px;
+  }
+  &__sm--long {
+    height: $height_sm;
+    width: $width_md;
+  }
+  &__sm--vertical {
+    height: $height_md;
+    width: 115px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &__md--verticalcontainer {
+    height: $height_md_l;
+    width: 270px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  &__md--horizontal {
+    height: $height_md;
+    width: $width_md;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &__md--vertical {
+    height: $height_md_l;
+    width: $width_md;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &__l--horizontal {
+    height: $height_md_l;
+    width: 520px;
+  }
+  &__sm--buttoncommon {
+    font-family: $fontfamily;
+    letter-spacing: $letterspacing;
+    font-size: 10px;
+    border-radius: 3px;
+    padding: 5px 15px;
+    border-style: none;
+    cursor: pointer;
+  }
+  &__md--buttoncommon {
+    font-family: $fontfamily;
+    color: white;
+    font-size: 15px;
+    border-radius: 25px;
+    padding: 10px 20px;
+    border-style: none;
+    background-image: linear-gradient(90deg, slateblue , #0066FF);
+    cursor: pointer;
+  }
+  &__text--white {
+    display: flex;
+    flex-direction: column;
+  }
+  &__title--white {
+    font-family: $fontfamily;
+    letter-spacing: $letterspacing;
+    color: white;
+    font-size: 20px;
+  }
+  &__description--white {
+    font-family: $fontfamily;
+    color: white;
+    font-size: 13px;
+  }
+  &__countrybutton--red {
+    background-color: red;
+    color: white;
+  }
+  &__countrybutton--blue {
+    background-color: steelblue;
+    color: white;
+  }
+  .card1 {
+    background-image: url('../image/bg-1.jpg');
+    flex-direction: column;
+    border: groove 1px lightgrey;
+    &__country {
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 20px;
+      margin-top: 20px;
+      margin-bottom: 81px;
+    }
+
+    &__banner {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      background-color: white;
+      padding: 20px;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+    &__text {
+      display: flex;
+      flex-direction: column;
+    }
+    &__text--title {
+      font-family: $fontfamily;
+      font-size: 20px;
+    }
+    &__text--description {
+      font-family: $fontfamily;
+      color: grey;
+      font-size: 12px;
+    }
+    &__heart {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .card2 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../image/bg-2.jpg');
+    border: groove 1px lightgrey;
+    flex-direction: column;
+    &__country {
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 20px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    &__click {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    &__banner {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    &__dot {
+      width: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+  }
+  .card3 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../image/bg-3.jpg');
+    border: groove 1px lightgrey;
+    flex-direction: column;
+    &__country {
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 20px;
+      margin-top: 20px;
+      margin-bottom: 80px;
+    }
+    &__banner {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    &__rate__dot {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    &__rate--star {
+      display: flex;
+      flex-direction: row;
+    }
+    &__rate--text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      font-family: $fontfamily;
+      font-size: 10px;
+      color: yellow;
+      margin-right: 45px;
+    }
+    &__dot {
+      width: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+  }
+  .card4 {
+    background-color: white;
+    border: groove 1px lightgrey;
+    &__uploadborder {
+      width: 240px;
+      margin: 5px;
+      border: dashed 2px lightgrey;
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    &__icon {
+      margin-bottom: 10px;
+    }
+    &__text {
+      font-family: $fontfamily;
+      margin-bottom: 5px;
+    }
+    &__instruction {
+      font-family: $fontfamily;
+      color: lightgrey;
+      margin-bottom: 5px;
+    }
+    &__link {
+      color: blue;
+      text-decoration: none;
+    }
+  }
+  .card5 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('../image/bg-16.png');
+    flex-direction: column;
+    &__country {
+      display: flex;
+      justify-content: center;
+      margin-top: 50px;
+      margin-bottom: 10px;
+    }
+    &__banner {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    &__maintext {
+      color: white;
+      font-family: $fontfamily;
+      letter-spacing: $letterspacing;
+    }
+    &__date {
+      font-size: 10px;
+      font-weight: lighter;
+      color: white;
+      font-family: $fontfamily;
+      margin-bottom: 42px;
+    }
+    &__button {
+      width: 100%;
+      font-family: $fontfamily;
+      color: white;
+      font-size: 15px;
+      border-radius: 10px;
+      padding: 5px 15px;
+      border-style: none;
+      background-image: linear-gradient(90deg, slateblue , #0066FF);
+      cursor: pointer;
+    }
+  }
+  .card6 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../image/bg-15.png');
+    flex-direction: column;
+    &__banner {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 70px;
+    }
+    &__icon {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+    &__text {
+      color: white;
+      font-family: $fontfamily;
+      letter-spacing: $letterspacing;
+      margin-bottom: 30px;
+    }
+    &__text--decoration {
+      display: inline-block;
+      border-bottom: solid 3px white;
+      padding-bottom: 2px;
+    }
+    &__button {
+      width: 90%;
+      font-family: $fontfamily;
+      color: white;
+      font-size: 14px;
+      border-radius: 5px;
+      padding: 5px 15px;
+      border-style: none;
+      background-image: linear-gradient(90deg, slateblue , #0066FF);
+      cursor: pointer;
+    }
+  }
+  .card7 {
+    flex-direction: column;
+    justify-content: flex-start;
+    border: groove 1px lightgrey;
+    &__country {
+      position: absolute;
+      background-image: url('../image/bg-7.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+      height: 120px;
+      width: 100%;
+    }
+    &__red {
+      margin-top: 20px;
+      margin-right: 20px;
+    }
+    &__banner {
+      position: relative;
+      margin-top: 140px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding-left: 20px;
+      padding-right: 20px;
+      background-color: white;
+    }
+    &__title {
+      font-family: $fontfamily;
+      letter-spacing: $letterspacing;
+    }
+    &__text {
+      //-webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+      position: relative;
+      overflow: hidden;
+      font-family: $fontfamily;
+      text-align: left;
+      font-size: 15px;
+      color: lightgrey;
+    }
+    &__text::after {
+      position: absolute;
+      content: "";
+      right: 0;
+      bottom: 0;
+      height: 100%;
+      width: 100%;
+      background-image: linear-gradient(transparent, white);
+      pointer-events: none;
+    }
+    &__button {
+      position: absolute;
+      align-self: center;
+      margin-top: 100px;
+    }
+  }
+  .card8 {
+    background-image: url('../image/bg-8.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex-direction: column;
+    border-style: none;
+    &__country {
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 20px;
+      margin-top: 40px;
+      margin-bottom: 125px;
+    }
+    &__countrybutton {
+      background-color: white;
+    }
+    &__banner {
+      border-left: solid 4px lightseagreen;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    &__date {
+      color: lightseagreen;
+      font-family: $fontfamily;
+    }
+    &__textbutton {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    &__text {
+      color: white;
+      font-family: $fontfamily;
+      font-size: 35px;
+    }
+    &__button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .card9 {
+    background-image: linear-gradient(90deg, blue, #0066FF);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &__icon {
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+    &__text {
+      font-family: $fontfamily;
+      letter-spacing: $letterspacing;
+      color: white;
+    }
+  }
+  .card10 {
+    background-image: linear-gradient(90deg, darkviolet, slateblue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &__icon {
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+    &__text {
+      font-family: $fontfamily;
+      letter-spacing: $letterspacing;
+      color: white;
+    }
+  }
+  .card11 {
+    background-image: url('../image/bg-11.png');
+    background-size: contain;
+    flex-direction: column;
+    &__buttonbanner {
+      display: flex;
+      justify-content: space-between;
+      margin: 25px;
+    }
+    &__dotmenu {
+      width: 20px;
+    }
+    &__textbanner {
+      display: flex;
+      flex-direction: column;
+      margin-left: 25px;
+      margin-top: 50px;
+    }
+  }
+  .card12 {
+    background-image: linear-gradient(90deg, chocolate, coral);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &__bg--201 {
+      position: absolute;
+      color: white;
+      font-family: $fontfamily;
+      letter-spacing: $letterspacing;
+      font-size: 150px;
+      opacity: 0.1;
+    }
+    &__bg--7 {
+      position: absolute;
+      color: white;
+      font-family: $fontfamily;
+      letter-spacing: $letterspacing;
+      font-size: 150px;
+      margin-top: 40px;
+      opacity: 0.1;
+    }
+    &__date {
+      color: white;
+      font-family: $fontfamily;
+      letter-spacing: $letterspacing;
+      width: 80px;
+      font-size: 10px;
+      text-align: center;
+      font-weight: lighter;
+    }
+    &__text {
+      color: white;
+      font-family: $fontfamily;
+      letter-spacing: $letterspacing;
+      font-size: 20px;
+      margin-top: -5px;
+    }
+    &__text--decoration {
+      display: inline-block;
+      border-bottom: solid 3px white;
+      padding-bottom: 2px;
+    }
+  }
+  .card13 {
+    background-image: url('../image/bg-13.png');
+    background-size: contain;
+    flex-direction: column;
+    &__buttonbanner {
+      display: flex;
+      justify-content: space-between;
+      margin: 25px;
+    }
+    &__dotmenu {
+      width: 20px;
+    }
+    &__textbanner {
+      display: flex;
+      flex-direction: column;
+      margin-left: 25px;
+      margin-top: 25px;
+    }
+    &__arrowbanner {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      margin: 20px 25px 20px 25px;
+    }
+    &__text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-family: $fontfamily;
+      font-size: 15px;
+      margin-right: 5px;
+    }
+    &__icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 15px;
+      width: 15px;
+    }
+  }
+  .card14 {
+    background-image: linear-gradient(270deg, rgba(42, 35, 80, 0.5), rgba(0, 75, 100, 0.5)), url('../image/bg-14.jpg');
+    flex-direction: column;
+    border: groove 1px lightgrey;
+    &__topbanner {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    &__buttonbanner {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      padding-top: 20px;
+    }
+    &__upload {
+      margin-right: 15px;
+    }
+    &__heart {
+      margin-right: 20px;
+    }
+    &__clickbanner {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    &__banner {
+      background-color: white;
+      padding: 10px 15px;
+      border-radius: 10px;
+    }
+    &__title {
+      font-family: $fontfamily;
+      font-size: 20px;
+    }
+    &__text {
+      font-family: $fontfamily;
+      font-size: 15px;
+      color: grey;
+      margin-top: 15px;
+      margin-bottom: 40px;
+      text-align: left;
+    }
+    &__button {
+      border: solid 2px black;
+      width: 100%;
+      font-family: $fontfamily;
+      color: white;
+      font-size: 15px;
+      border-radius: 5px;
+      padding: 5px 15px;
+      border-style: none;
+      background-image: linear-gradient(90deg, slateblue , #0066FF);
+      cursor: pointer;
+    }
+  }
+  .card15 {
+    background-image: url('../image/bg-15.png');
+    background-color: chocolate;
+    flex-direction: column;
+    &__heart {
+      display: flex;
+      justify-content: flex-end;
+      margin: 20px 20px 150px 0px;
+    }
+    &__banner {
+      display: flex;
+      flex-direction: column;
+      margin: 20px;
+    }
+    &__titlebox {
+      display: flex;
+    }
+    &__title {
+      font-family: $fontfamily;
+      letter-spacing: $letterspacing;
+      color: white;
+      margin-right: 10px;
+      font-size: 20px;
+    }
+    &__place {
+      font-family: $fontfamily;
+      color: white;
+      font-size: 15px;
+    }
+    &__button {
+      color: white;
+      background-color: red;
+      border-radius: 25px;
+      padding: 5px 10px;
+    }
+  }
+  .card16 {
+    background-image: url('../image/bg-16.png');
+    flex-direction: column;
+    align-items: center;
+    &__heart {
+      display: flex;
+      width: 200px;
+      justify-content: flex-end;
+      margin-top: 20px;
+      margin-bottom: 150px;
+    }
+    &__banner {
+      display: flex;
+      justify-content: space-between;
+      background-color: white;
+      border: groove 1px lightgrey;
+      width: 200px;
+      height: 100px;
+      border-radius: 10px;
+      box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.1), 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+      padding: 10px;
+    }
+    &__subbanner--vertical {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    &__rate {
+      display: flex;
+    }
+    &__rate--star {
+      display: flex;
+    }
+    &__rate--review {
+      color: lightgrey;
+      font-family: $fontfamily;
+      font-size: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      margin-left: 5px;
+    }
+    &__title {
+      font-family: $fontfamily;
+      letter-spacing: $letterspacing;
+      font-size: 20px;
+    }
+    &__place {
+      font-family: $fontfamily;
+      color: grey;
+      font-size: 10px;
+      margin-bottom: 15px;
+    }
+    &__price {
+      font-family: $fontfamily;
+      letter-spacing: $letterspacing;
+      margin-bottom: 10px;
+    }
+    &__subbanner--arrow {
+      display: flex;
+      align-items: flex-end;
+    }
+    &__arrow {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+  }
+  .card17 {
+    flex-direction: row;
+    border: groove 1px lightgrey;
+    &__imagebox {
+      background-image: linear-gradient(-45deg, rgba(255, 0, 0, 0.2), rgba(0, 0, 255, 0.7)), url('../image/bg-7.png');
+      background-position: top;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      width: 800px;
+    }
+    &__infobox {
+      display: flex;
+      flex-direction: column;
+      margin: 20px 15px;
+    }
+    &__country {
+      display: flex;
+      justify-content: flex-end;
+    }
+    &__date {
+      color: lightseagreen;
+      font-family: $fontfamily;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    &__title {
+      font-family: $fontfamily;
+      font-size: 20px;
+    }
+    &__text {
+      font-family: $fontfamily;
+    }
+    &__link {
+      display: flex;
+      font-family: $fontfamily;
+      color: #0066FF;
+      text-decoration: none;
+    }
+    &__button {
+      margin-left: 5px;
+      width: 15px;
+      height: 15px;
+    }
+  }
+}

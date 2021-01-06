@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Lesson 3 Flexbox</title>
+    <link rel="stylesheet" type="text/css" href="css/lesson3flex.css">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+  </head>
+  <body>
+    <h1>Multiple Cards Design with Flexbox</h1>
+    <div class="card">
+
+      <!-- Card 1 -->
+      <div class="card__md--horizontal card__commonstyle card1">
+        <div class="card1__country">
+          <button type="button" name="card1__sm--button" class="card__sm--buttoncommon card__countrybutton--blue">SPAIN</button>
+        </div>
+        <div class="card1__banner">
+          <div class="card1__text">
+            <div class="card1__text--title">
+              Toledo, Spain
+            </div>
+            <div class="card1__text--description">
+              Also known as the Imperial City
+            </div>
+          </div>
+          <div class="card1__heart">
+            <a href=""><img src="icon/icon-emptyheartgrey.svg" alt="heart--empty"></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card__md--horizontal card__commonstyle card2">
+        <div class="card2__country">
+          <button type="button" name="card2__sm--button" class="card__sm--buttoncommon card__countrybutton--red">ITALY</button>
+        </div>
+        <div class="card2__click">
+          <a href=""><img src="icon/icon-combined-shape.svg" alt="play--click"></a>
+        </div>
+        <div class="card2__banner">
+          <div class="card__text--white">
+            <div class="card__title--white">
+              Boboli Gardens
+            </div>
+            <div class="card__description--white">
+              Florence, Italy
+            </div>
+          </div>
+          <div class="card2__dot">
+            <a href=""><img src="icon/icon-dotmenuwhite.svg" alt="dot_menu"></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card__md--horizontal card__commonstyle card3">
+        <div class="card3__country">
+          <button type="button" name="card3__sm--button" class="card__sm--buttoncommon card__countrybutton--red">ITALY</button>
+        </div>
+        <div class="card3__banner">
+          <div class="card__text--white">
+            <div class="card__title--white">
+              Burano Island
+            </div>
+            <div class="card__description--white">
+              Burano, Venice, Italy
+            </div>
+          </div>
+          <div class="card3__rate__dot">
+            <div class="card3__rate--star">
+              <img src="icon/icon-star-filled.svg" alt="star-filled">
+              <img src="icon/icon-star-filled.svg" alt="star-filled">
+              <img src="icon/icon-star-filled.svg" alt="star-filled">
+              <img src="icon/icon-star-filled.svg" alt="star-filled">
+              <img src="icon/icon-star-empty.svg" alt="star-empty">
+            </div>
+            <span class="card3__rate--text">420 reviews</span>
+            <div class="card3__dot">
+              <a href=""><img src="icon/icon-dotmenuwhite.svg" alt="dot_menu"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="card__md--horizontal card__commonstyle card4">
+        <div class="card4__uploadborder">
+          <div class="card4__icon">
+            <a href=""><img src="icon/icon-forward.svg" alt="upload"></a>
+          </div>
+          <div class="card4__text">
+            Upload a new trip
+          </div>
+          <div class="card4__instruction">
+            Drag a file to attach or
+          </div>
+          <a href="#" class="card4__link">browse</a>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="card__sm--vertical card__commonstyle card5">
+        <div class="card5__country">
+          <button type="button" name="card5__sm--button" class="card__sm--buttoncommon card__countrybutton--red">ITALY</button>
+        </div>
+        <div class="card5__banner">
+          <div class="card5__maintext">
+            BURANO
+          </div>
+          <div class="card5__maintext">
+            ISLAND
+          </div>
+          <div class="card5__date">
+            November 2017
+          </div>
+          <button type="button" name="card5__l--button" class="card5__button">View Trip</button>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="card__sm--vertical card__commonstyle card6">
+        <div class="card6__banner">
+          <div class="card6__icon">
+            <img src="icon/icon-place.svg" alt="icon_place">
+          </div>
+          <div class="card6__text">
+            Pl<span class="card6__text--decoration">ac</span>es
+          </div>
+          <button type="button" name="card6__l--button" class="card6__button">Know more</button>
+        </div>
+      </div>
+
+      <!-- Card 7 -->
+      <div class="card__md--vertical card__commonstyle card7">
+        <div class="card7__country">
+          <button type="button" name="card7__sm--button" class="card__sm--buttoncommon card__countrybutton--red card7__red">ITALY</button>
+        </div>
+        <div class="card7__banner">
+          <div class="card7__title">
+            Venice Islands
+          </div>
+          <p class="card7__text">
+            Venice is a city in northeastern Italy and the capital of the Veneto region.
+            It is sited on a group of 118 small islands that are separated by canals and linked by bridges.
+          </p>
+          <button type="button" name="card7__md--button" class="card__md--buttoncommon card7__button">View more</button>
+        </div>
+      </div>
+
+      <!-- Card 8 -->
+      <div class="card__l--horizontal card__commonstyle card8">
+        <div class="card8__country">
+          <button type="button" name="card8__sm--button" class="card__sm--buttoncommon card8__countrybutton">ITALY</button>
+        </div>
+        <div class="card8__banner">
+          <div class="card8__date">
+            November 2017
+          </div>
+          <div class="card8__textbutton">
+            <div class="card8__text">
+              Florence, Italy
+            </div>
+            <div class="card8__button">
+              <button type="button" name="card8__md--button" class="card__md--buttoncommon">View Trip</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 9, Card 10, Card 11 -->
+      <div class="card__md--verticalcontainer">
+
+        <!-- Card 9 -->
+        <div class="card__sm--horizontal card__commonstyle card9">
+          <div class="card9__icon">
+            <img src="icon/icon-pic.svg" alt="pictures">
+          </div>
+          <div class="card9__text">
+            Pictures
+          </div>
+        </div>
+
+        <!-- Card 10 -->
+        <div class="card__sm--horizontal card__commonstyle card10">
+          <div class="card10__icon">
+            <img src="icon/icon-place.svg" alt="pictures">
+          </div>
+          <div class="card10__text">
+            Places
+          </div>
+        </div>
+
+        <!-- Card 11 -->
+        <div class="card__md--horizontal card__commonstyle card11">
+          <div class="card11__buttonbanner">
+            <button type="button" name="card11__sm--button" class="card__sm--buttoncommon card__countrybutton--red">ITALY</button>
+            <div class="card11__dotmenu">
+              <a href=""><img src="icon/icon-dotverticalwhite.svg" alt="dot_menu--vertical"></a>
+            </div>
+          </div>
+          <div class="card11__textbanner">
+            <div class="card__title--white">
+              The Colosseum
+            </div>
+            <div class="card__description--white">
+              Rome, Italy
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 12, Card 13 -->
+      <div class="card__md--verticalcontainer">
+
+        <!-- Card 12 -->
+        <div class="card__sm--long card__commonstyle card12">
+          <div class="card12__bg--201">
+            201
+          </div>
+          <div class="card12__bg--7">
+            7
+          </div>
+          <div class="card12__date">
+            NOVEMBER 2017
+          </div>
+          <div class="card12__text">
+            EU<span class="card12__text--decoration">RO T</span>RIP
+          </div>
+        </div>
+
+        <!-- Card 13 -->
+        <div class="card__md--horizontal card__commonstyle card13">
+          <div class="card13__buttonbanner">
+            <button type="button" name="card13__sm--button" class="card__sm--buttoncommon card__countrybutton--blue">VANTICAN</button>
+            <div class="card13__dotmenu">
+              <a href=""><img src="icon/icon-dotverticalwhite.svg" alt="dot_menu--vertical"></a>
+            </div>
+          </div>
+          <div class="card13__textbanner">
+            <div class="card__title--white">
+              Vantican City
+            </div>
+            <div class="card__description--white">
+              Vantican
+            </div>
+          </div>
+          <div class="card13__arrowbanner">
+            <div class="card13__text">
+              View Trip
+            </div>
+            <a href=""><img src="icon/icon-rightarrowwhite.svg" alt="rightarrow" class="card13__icon"></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 14 -->
+      <div class="card__md--vertical card__commonstyle card14">
+        <div class="card14__topbanner">
+          <div class="card14__buttonbanner">
+            <div class="card14__upload">
+              <a href=""><img src="icon/icon-forwardwhite.svg" alt="upload"></a>
+            </div>
+            <div class="card14__heart">
+                <a href=""><img src="icon/icon-emptyheartwhite.svg" alt="emptyheartwhite"></a>
+            </div>
+          </div>
+          <div class="card14__clickbanner">
+            <a href=""><img src="icon/icon-combined-shape.svg" alt="play"></a>
+          </div>
+        </div>
+        <div class="card14__banner">
+          <div class="card14__title">
+            Monuments in Florence
+          </div>
+          <div class="card14__text">
+            A quick journey into Florence's most important monuments.
+          </div>
+          <button type="button" name="card14__l--button" class="card14__button">View trip detail</button>
+        </div>
+      </div>
+
+      <!-- Card 15 -->
+      <div class="card__md--vertical card__commonstyle card15">
+        <div class="card15__heart">
+          <a href=""><img src="icon/icon-heart.svg" alt="heart--filled"></a>
+        </div>
+        <div class="card15__banner">
+          <div class="card15__titlebox">
+            <div class="card15__title">
+              Burano Doors
+            </div>
+            <button type="button" name="card15__button" class="card__sm--buttoncommon card15__button">16</button>
+          </div>
+          <div class="card15__place">
+            Burano, Venice, Italy
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Card 16 -->
+      <div class="card__md--vertical card__commonstyle card16">
+        <div class="card16__heart">
+          <a href=""><img src="icon/icon-heart.svg" alt="heart--filled"></a>
+        </div>
+        <div class="card16__banner">
+          <div class="card16__subbanner--vertical">
+            <div class="card16__rate">
+              <div class="card16__rate--star">
+                <img src="icon/icon-star-filled.svg" alt="star-filled">
+                <img src="icon/icon-star-filled.svg" alt="star-filled">
+                <img src="icon/icon-star-filled.svg" alt="star-filled">
+                <img src="icon/icon-star-filled.svg" alt="star-filled">
+                <img src="icon/icon-star-empty.svg" alt="star-empty">
+              </div>
+              <span class="card16__rate--review">420 Reviews</span>
+            </div>
+            <div class="card16__title">
+              The Blue House
+            </div>
+            <div class="card16__place">
+              Burano, Venice, Italy
+            </div>
+            <div class="card16__price">
+              $250 per night
+            </div>
+          </div>
+          <div class="card16__subbanner--arrow">
+            <a href=""><img src="image/blue-arrow.png" alt="blue__arrow" class="card16__arrow"></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 17 -->
+      <div class="card__l--horizontal card__commonstyle card17">
+        <div class="card17__imagebox">
+        </div>
+        <div class="card17__infobox">
+          <div class="card17__country">
+            <button type="button" name="card17__sm--button" class="card__sm--buttoncommon card__countrybutton--red">ITALY</button>
+          </div>
+          <div class="card17__date">
+            November 2017
+          </div>
+          <div class="card17__title">
+            Venice Islands
+          </div>
+          <p class="card17__text">
+            Venice is a city in northeastern Italy and the capital of the Veneto region.
+            It is on a group of 118 small islands that are separated by canals and linked by over 400 bridges.
+            The islands are in the shallow Venetian Lagoon,
+            and enclosed bay lying between the mouths of the Po and the Piave rivers.
+          </p>
+          <a href="" class="card17__link">
+            <span>View Trip</span>
+            <img src="icon/icon-rightarrowblue.svg" alt="rightarrow--blue" class="card17__button">
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
